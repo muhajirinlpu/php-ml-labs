@@ -1,0 +1,15 @@
+age_group,salary_category,marital_status,has_debt,buy_laptop
+<=30,high,single,yes,no
+<=30,high,single,no,no
+31-40,high,single,yes,yes
+>40,middle,single,yes,yes
+>40,low,married,yes,yes
+>40,low,married,no,no
+31-40,low,married,no,yes
+<=30,middle,single,yes,no
+<=30,low,married,yes,yes
+>40,middle,married,yes,yes
+<=30,middle,married,no,yes
+31-40,middle,single,no,yes
+31-40,high,married,yes,yes
+>40,middle,single,no,no
