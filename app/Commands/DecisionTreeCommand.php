@@ -86,7 +86,7 @@ class DecisionTreeCommand extends Command
     {
         $this->getOutput()->info('testing dataset :');
         $dataset = $dataset->map(function (array $data) use ($tree) {
-            $data['__test_result'] = implode(',', $tree->test($data));
+            $data['__test_result'] = implode('/', $tree->test($data));
 
             return $data;
         });
