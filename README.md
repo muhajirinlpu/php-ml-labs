@@ -16,3 +16,11 @@ https://user-images.githubusercontent.com/13056772/158528008-ea73da58-f544-42ff-
 ```shell
 php application demo:decision-tree data/signal.csv
 ```
+Result : 
+
+![Kooha-03-17-2022-21-43-57](https://user-images.githubusercontent.com/13056772/158830083-0e6999ea-f166-4a1a-88de-325624c9561a.gif)
+
+
+```shell
+php application demo:decision-tree data/heart_decease.csv
+```
