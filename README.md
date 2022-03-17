@@ -3,6 +3,10 @@ PHP Machine Learning Lab
 
 This program build using [Laravel Zero](https://laravel-zero.com/) and [Rubix ML](https://rubixml.com/).
 
+## Table of Contents
+1. [Naive Bayes (Rubix ML)](#naive-bayes-rubix-ml)
+2. [Decision Tree (No Rubix ML)](#decision-tree-no-rubix-ml)
+
 ### Naive Bayes (Rubix ML)
 Main code [here](https://github.com/muhajirinlpu/php-ml-labs/blob/main/app/Commands/NaiveBayesCommand.php)
 ```shell
