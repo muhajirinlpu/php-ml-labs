@@ -8,6 +8,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use LaravelZero\Framework\Commands\Command;
 use League\Csv as LeagueCsv;
+use function Termwind\render;
 
 class DecisionTreeCommand extends Command
 {
@@ -77,23 +78,31 @@ class DecisionTreeCommand extends Command
 
         $tree = $buildTree(Arr::where($headers, fn($header) => $header !== $subjectKey), $dataset);
 
-        $this->testDataset($tree, $headers, $dataset);
+        $this->testDataset($tree, $headers, $dataset, $subjectKey);
 
         return 0;
     }
 
-    private function testDataset(Node $tree, array $headers, Collection $dataset)
+    private function testDataset(Node $tree, array $headers, Collection $dataset, mixed $subjectKey): void
     {
-        $this->getOutput()->info('testing dataset :');
+        render('<span class="mt-12 text-slate-100 p-12 font-bold bg-blue-800 block">Testing</span>');
         $dataset = $dataset->map(function (array $data) use ($tree) {
             $data['__test_result'] = implode('/', $tree->test($data));
 
             return $data;
         });
 
-        $this->info($tree->toJson());
+        $json = $tree->toJson();
+        render("<b>JSON Tree : </b>");
+        render("<pre>$json</pre>");
 
+        render("<b class='mt-2'>Test Result : </b>");
         $this->table(array_merge($headers, ['__test_result']), $dataset);
+
+        $error = $dataset->filter(fn(array $data) => $data['__test_result'] !== $data[$subjectKey])->count();
+        $total = $dataset->count();
+
+        $this->error("$error per $total, error rate = " . $error / $total * 100);
     }
 
     /**

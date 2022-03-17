@@ -1,0 +1,323 @@
+➜  php-ml-labs git:(main) ✗ php application demo:decision-tree data/signal.csv
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++-------+---------+--------------+----------+---------+
+| TIME  | PACKAGE | FREQUENCY    | PRIORITY | STATUS  |
++-------+---------+--------------+----------+---------+
+| SHORT | BIG     | INTERMEDIATE | LOW      | TROUBLE |
+| SHORT | SMALL   | LOW          | HIGH     | TROUBLE |
+| LONG  | BIG     | INTERMEDIATE | HIGH     | NORMAL  |
+| LONG  | SMALL   | STRONG       | LOW      | NORMAL  |
+| SHORT | BIG     | STRONG       | HIGH     | TROUBLE |
+| LONG  | SMALL   | LOW          | HIGH     | TROUBLE |
+| LONG  | SMALL   | STRONG       | LOW      | TROUBLE |
+| LONG  | SMALL   | INTERMEDIATE | LOW      | NORMAL  |
+| LONG  | BIG     | STRONG       | HIGH     | NORMAL  |
+| LONG  | SMALL   | INTERMEDIATE | LOW      | TROUBLE |
+| SHORT | BIG     | INTERMEDIATE | HIGH     | NORMAL  |
+| LONG  | BIG     | LOW          | HIGH     | NORMAL  |
++-------+---------+--------------+----------+---------+
+------------------------------------------------------
++-------+---------+-------+
+| TIME  | STATUS  | total |
++-------+---------+-------+
+| SHORT | NORMAL  | 1     |
+| SHORT | TROUBLE | 3     |
+| LONG  | NORMAL  | 5     |
+| LONG  | TROUBLE | 3     |
++-------+---------+-------+
+SHORT: 0.81127812445913
+LONG: 0.95443400292497
+==> Entropy for TIME,STATUS is 0.90671537676969
++---------+---------+-------+
+| PACKAGE | STATUS  | total |
++---------+---------+-------+
+| BIG     | NORMAL  | 4     |
+| BIG     | TROUBLE | 2     |
+| SMALL   | NORMAL  | 2     |
+| SMALL   | TROUBLE | 4     |
++---------+---------+-------+
+BIG: 0.91829583405449
+SMALL: 0.91829583405449
+==> Entropy for PACKAGE,STATUS is 0.91829583405449
++--------------+---------+-------+
+| FREQUENCY    | STATUS  | total |
++--------------+---------+-------+
+| INTERMEDIATE | NORMAL  | 3     |
+| INTERMEDIATE | TROUBLE | 2     |
+| LOW          | NORMAL  | 1     |
+| LOW          | TROUBLE | 2     |
+| STRONG       | NORMAL  | 2     |
+| STRONG       | TROUBLE | 2     |
++--------------+---------+-------+
+INTERMEDIATE: 0.97095059445467
+LOW: 0.91829583405449
+STRONG: 1
+==> Entropy for FREQUENCY,STATUS is 0.9674700395364
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| LOW      | NORMAL  | 2     |
+| LOW      | TROUBLE | 3     |
+| HIGH     | NORMAL  | 4     |
+| HIGH     | TROUBLE | 3     |
++----------+---------+-------+
+LOW: 0.97095059445467
+HIGH: 0.98522813603425
+==> Entropy for PRIORITY,STATUS is 0.97927916037609
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++---------+--------------+----------+---------+
+| PACKAGE | FREQUENCY    | PRIORITY | STATUS  |
++---------+--------------+----------+---------+
+| BIG     | INTERMEDIATE | LOW      | TROUBLE |
+| SMALL   | LOW          | HIGH     | TROUBLE |
+| BIG     | STRONG       | HIGH     | TROUBLE |
+| BIG     | INTERMEDIATE | HIGH     | NORMAL  |
++---------+--------------+----------+---------+
+------------------------------------------------------
++---------+---------+-------+
+| PACKAGE | STATUS  | total |
++---------+---------+-------+
+| BIG     | NORMAL  | 1     |
+| BIG     | TROUBLE | 2     |
+| SMALL   | NORMAL  | 0     |
+| SMALL   | TROUBLE | 1     |
++---------+---------+-------+
+BIG: 0.91829583405449
+SMALL: 0
+==> Entropy for PACKAGE,STATUS is 0.68872187554087
++--------------+---------+-------+
+| FREQUENCY    | STATUS  | total |
++--------------+---------+-------+
+| INTERMEDIATE | NORMAL  | 1     |
+| INTERMEDIATE | TROUBLE | 1     |
+| LOW          | NORMAL  | 0     |
+| LOW          | TROUBLE | 1     |
+| STRONG       | NORMAL  | 0     |
+| STRONG       | TROUBLE | 1     |
++--------------+---------+-------+
+INTERMEDIATE: 1
+LOW: 0
+STRONG: 0
+==> Entropy for FREQUENCY,STATUS is 0.5
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| LOW      | NORMAL  | 0     |
+| LOW      | TROUBLE | 1     |
+| HIGH     | NORMAL  | 1     |
+| HIGH     | TROUBLE | 2     |
++----------+---------+-------+
+LOW: 0
+HIGH: 0.91829583405449
+==> Entropy for PRIORITY,STATUS is 0.68872187554087
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++---------+----------+---------+
+| PACKAGE | PRIORITY | STATUS  |
++---------+----------+---------+
+| BIG     | LOW      | TROUBLE |
+| BIG     | HIGH     | NORMAL  |
++---------+----------+---------+
+------------------------------------------------------
++---------+---------+-------+
+| PACKAGE | STATUS  | total |
++---------+---------+-------+
+| BIG     | NORMAL  | 1     |
+| BIG     | TROUBLE | 1     |
++---------+---------+-------+
+BIG: 1
+==> Entropy for PACKAGE,STATUS is 1
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| LOW      | NORMAL  | 0     |
+| LOW      | TROUBLE | 1     |
+| HIGH     | NORMAL  | 1     |
+| HIGH     | TROUBLE | 0     |
++----------+---------+-------+
+LOW: 0
+HIGH: 0
+==> Entropy for PRIORITY,STATUS is 0
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++---------+--------------+----------+---------+
+| PACKAGE | FREQUENCY    | PRIORITY | STATUS  |
++---------+--------------+----------+---------+
+| BIG     | INTERMEDIATE | HIGH     | NORMAL  |
+| SMALL   | STRONG       | LOW      | NORMAL  |
+| SMALL   | LOW          | HIGH     | TROUBLE |
+| SMALL   | STRONG       | LOW      | TROUBLE |
+| SMALL   | INTERMEDIATE | LOW      | NORMAL  |
+| BIG     | STRONG       | HIGH     | NORMAL  |
+| SMALL   | INTERMEDIATE | LOW      | TROUBLE |
+| BIG     | LOW          | HIGH     | NORMAL  |
++---------+--------------+----------+---------+
+------------------------------------------------------
++---------+---------+-------+
+| PACKAGE | STATUS  | total |
++---------+---------+-------+
+| BIG     | NORMAL  | 3     |
+| BIG     | TROUBLE | 0     |
+| SMALL   | NORMAL  | 2     |
+| SMALL   | TROUBLE | 3     |
++---------+---------+-------+
+BIG: 0
+SMALL: 0.97095059445467
+==> Entropy for PACKAGE,STATUS is 0.60684412153417
++--------------+---------+-------+
+| FREQUENCY    | STATUS  | total |
++--------------+---------+-------+
+| INTERMEDIATE | NORMAL  | 2     |
+| INTERMEDIATE | TROUBLE | 1     |
+| STRONG       | NORMAL  | 2     |
+| STRONG       | TROUBLE | 1     |
+| LOW          | NORMAL  | 1     |
+| LOW          | TROUBLE | 1     |
++--------------+---------+-------+
+INTERMEDIATE: 0.91829583405449
+STRONG: 0.91829583405449
+LOW: 1
+==> Entropy for FREQUENCY,STATUS is 0.93872187554087
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| HIGH     | NORMAL  | 3     |
+| HIGH     | TROUBLE | 1     |
+| LOW      | NORMAL  | 2     |
+| LOW      | TROUBLE | 2     |
++----------+---------+-------+
+HIGH: 0.81127812445913
+LOW: 1
+==> Entropy for PRIORITY,STATUS is 0.90563906222957
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++--------------+----------+---------+
+| FREQUENCY    | PRIORITY | STATUS  |
++--------------+----------+---------+
+| STRONG       | LOW      | NORMAL  |
+| LOW          | HIGH     | TROUBLE |
+| STRONG       | LOW      | TROUBLE |
+| INTERMEDIATE | LOW      | NORMAL  |
+| INTERMEDIATE | LOW      | TROUBLE |
++--------------+----------+---------+
+------------------------------------------------------
++--------------+---------+-------+
+| FREQUENCY    | STATUS  | total |
++--------------+---------+-------+
+| STRONG       | NORMAL  | 1     |
+| STRONG       | TROUBLE | 1     |
+| LOW          | NORMAL  | 0     |
+| LOW          | TROUBLE | 1     |
+| INTERMEDIATE | NORMAL  | 1     |
+| INTERMEDIATE | TROUBLE | 1     |
++--------------+---------+-------+
+STRONG: 1
+LOW: 0
+INTERMEDIATE: 1
+==> Entropy for FREQUENCY,STATUS is 0.8
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| LOW      | NORMAL  | 2     |
+| LOW      | TROUBLE | 2     |
+| HIGH     | NORMAL  | 0     |
+| HIGH     | TROUBLE | 1     |
++----------+---------+-------+
+LOW: 1
+HIGH: 0
+==> Entropy for PRIORITY,STATUS is 0.8
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++----------+---------+
+| PRIORITY | STATUS  |
++----------+---------+
+| LOW      | NORMAL  |
+| LOW      | TROUBLE |
++----------+---------+
+------------------------------------------------------
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| LOW      | NORMAL  | 1     |
+| LOW      | TROUBLE | 1     |
++----------+---------+-------+
+LOW: 1
+==> Entropy for PRIORITY,STATUS is 1
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++----------+---------+
+| PRIORITY | STATUS  |
++----------+---------+
+| LOW      | NORMAL  |
+| LOW      | TROUBLE |
++----------+---------+
+------------------------------------------------------
++----------+---------+-------+
+| PRIORITY | STATUS  | total |
++----------+---------+-------+
+| LOW      | NORMAL  | 1     |
+| LOW      | TROUBLE | 1     |
++----------+---------+-------+
+LOW: 1
+==> Entropy for PRIORITY,STATUS is 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Testing
+
+JSON Tree :
+
+{"key":"TIME","leafs":[{"value":"SHORT","node":{"key":"FREQUENCY","leafs":[{"value":"INTERMEDIATE","node":{"key":"PRIORITY","leafs":[{"value":"LOW","results":["TROUBLE"]},{"value":"HIGH","results":["NORMAL"]}],"paramsEntropyScores":{"PACKAGE":1,"PRIORITY":0}}},{"value":"LOW","results":["TROUBLE"]},{"value":"STRONG","results":["TROUBLE"]}],"paramsEntropyScores":{"PACKAGE":0.6887218755408672,"FREQUENCY":0.5,"PRIORITY":0.6887218755408672}}},{"value":"LONG","node":{"key":"PACKAGE","leafs":[{"value":"BIG","results":["NORMAL"]},{"value":"SMALL","node":{"key":"FREQUENCY","leafs":[{"value":"STRONG","node":{"key":"PRIORITY","leafs":[{"value":"LOW","results":["NORMAL","TROUBLE"]}],"paramsEntropyScores":{"PRIORITY":1}}},{"value":"LOW","results":["TROUBLE"]},{"value":"INTERMEDIATE","node":{"key":"PRIORITY","leafs":[{"value":"LOW","results":["NORMAL","TROUBLE"]}],"paramsEntropyScores":{"PRIORITY":1}}}],"paramsEntropyScores":{"FREQUENCY":0.8,"PRIORITY":0.8}}}],"paramsEntropyScores":{"PACKAGE":0.6068441215341679,"FREQUENCY":0.9387218755408672,"PRIORITY":0.9056390622295665}}}],"paramsEntropyScores":{"TIME":0.9067153767696876,"PACKAGE":0.9182958340544896,"FREQUENCY":0.9674700395364009,"PRIORITY":0.979279160376092}}
+
+
+Test Result :
++-------+---------+--------------+----------+---------+----------------+
+| TIME  | PACKAGE | FREQUENCY    | PRIORITY | STATUS  | __test_result  |
++-------+---------+--------------+----------+---------+----------------+
+| SHORT | BIG     | INTERMEDIATE | LOW      | TROUBLE | TROUBLE        |
+| SHORT | SMALL   | LOW          | HIGH     | TROUBLE | TROUBLE        |
+| LONG  | BIG     | INTERMEDIATE | HIGH     | NORMAL  | NORMAL         |
+| LONG  | SMALL   | STRONG       | LOW      | NORMAL  | NORMAL/TROUBLE |
+| SHORT | BIG     | STRONG       | HIGH     | TROUBLE | TROUBLE        |
+| LONG  | SMALL   | LOW          | HIGH     | TROUBLE | TROUBLE        |
+| LONG  | SMALL   | STRONG       | LOW      | TROUBLE | NORMAL/TROUBLE |
+| LONG  | SMALL   | INTERMEDIATE | LOW      | NORMAL  | NORMAL/TROUBLE |
+| LONG  | BIG     | STRONG       | HIGH     | NORMAL  | NORMAL         |
+| LONG  | SMALL   | INTERMEDIATE | LOW      | TROUBLE | NORMAL/TROUBLE |
+| SHORT | BIG     | INTERMEDIATE | HIGH     | NORMAL  | NORMAL         |
+| LONG  | BIG     | LOW          | HIGH     | NORMAL  | NORMAL         |
++-------+---------+--------------+----------+---------+----------------+
+4 per 12, error rate = 33.333333333333

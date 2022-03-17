@@ -1,0 +1,229 @@
+➜  php-ml-labs git:(main) ✗ php application demo:decision-tree data/heart_decease.csv
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++-------+--------+--------+----------+---------------+
+| AGE   | GENDER | SMOKER | EXERCISE | HEART DICEASE |
++-------+--------+--------+----------+---------------+
+| OLD   | MALE   | NO     | YES      | NO            |
+| OLD   | MALE   | YES    | YES      | NO            |
+| YOUNG | MALE   | YES    | NO       | NO            |
+| OLD   | MALE   | NO     | NO       | NO            |
+| YOUNG | FEMALE | NO     | NO       | YES           |
+| YOUNG | MALE   | NO     | YES      | YES           |
+| YOUNG | MALE   | NO     | YES      | NO            |
+| OLD   | FEMALE | NO     | NO       | YES           |
+| YOUNG | MALE   | YES    | NO       | NO            |
+| OLD   | MALE   | YES    | NO       | NO            |
+| YOUNG | MALE   | YES    | YES      | YES           |
+| OLD   | MALE   | YES    | NO       | NO            |
+| YOUNG | MALE   | NO     | NO       | NO            |
+| OLD   | MALE   | NO     | YES      | NO            |
+| YOUNG | MALE   | YES    | NO       | NO            |
++-------+--------+--------+----------+---------------+
+------------------------------------------------------
++-------+---------------+-------+
+| AGE   | HEART DICEASE | total |
++-------+---------------+-------+
+| OLD   | NO            | 6     |
+| OLD   | YES           | 1     |
+| YOUNG | NO            | 5     |
+| YOUNG | YES           | 3     |
++-------+---------------+-------+
+OLD: 0.59167277858233
+YOUNG: 0.95443400292497
+==> Entropy for AGE,HEART DICEASE is 0.78514543156507
++--------+---------------+-------+
+| GENDER | HEART DICEASE | total |
++--------+---------------+-------+
+| MALE   | NO            | 11    |
+| MALE   | YES           | 2     |
+| FEMALE | NO            | 0     |
+| FEMALE | YES           | 2     |
++--------+---------------+-------+
+MALE: 0.61938219467876
+FEMALE: 0
+==> Entropy for GENDER,HEART DICEASE is 0.53679790205493
++--------+---------------+-------+
+| SMOKER | HEART DICEASE | total |
++--------+---------------+-------+
+| NO     | NO            | 5     |
+| NO     | YES           | 3     |
+| YES    | NO            | 6     |
+| YES    | YES           | 1     |
++--------+---------------+-------+
+NO: 0.95443400292497
+YES: 0.59167277858233
+==> Entropy for SMOKER,HEART DICEASE is 0.78514543156507
++----------+---------------+-------+
+| EXERCISE | HEART DICEASE | total |
++----------+---------------+-------+
+| YES      | NO            | 4     |
+| YES      | YES           | 2     |
+| NO       | NO            | 7     |
+| NO       | YES           | 2     |
++----------+---------------+-------+
+YES: 0.91829583405449
+NO: 0.76420450650862
+==> Entropy for EXERCISE,HEART DICEASE is 0.82584103752697
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++-------+--------+----------+---------------+
+| AGE   | SMOKER | EXERCISE | HEART DICEASE |
++-------+--------+----------+---------------+
+| OLD   | NO     | YES      | NO            |
+| OLD   | YES    | YES      | NO            |
+| YOUNG | YES    | NO       | NO            |
+| OLD   | NO     | NO       | NO            |
+| YOUNG | NO     | YES      | YES           |
+| YOUNG | NO     | YES      | NO            |
+| YOUNG | YES    | NO       | NO            |
+| OLD   | YES    | NO       | NO            |
+| YOUNG | YES    | YES      | YES           |
+| OLD   | YES    | NO       | NO            |
+| YOUNG | NO     | NO       | NO            |
+| OLD   | NO     | YES      | NO            |
+| YOUNG | YES    | NO       | NO            |
++-------+--------+----------+---------------+
+------------------------------------------------------
++-------+---------------+-------+
+| AGE   | HEART DICEASE | total |
++-------+---------------+-------+
+| OLD   | NO            | 6     |
+| OLD   | YES           | 0     |
+| YOUNG | NO            | 5     |
+| YOUNG | YES           | 2     |
++-------+---------------+-------+
+OLD: 0
+YOUNG: 0.86312056856663
+==> Entropy for AGE,HEART DICEASE is 0.46475722922819
++--------+---------------+-------+
+| SMOKER | HEART DICEASE | total |
++--------+---------------+-------+
+| NO     | NO            | 5     |
+| NO     | YES           | 1     |
+| YES    | NO            | 6     |
+| YES    | YES           | 1     |
++--------+---------------+-------+
+NO: 0.65002242164835
+YES: 0.59167277858233
+==> Entropy for SMOKER,HEART DICEASE is 0.61860338307434
++----------+---------------+-------+
+| EXERCISE | HEART DICEASE | total |
++----------+---------------+-------+
+| YES      | NO            | 4     |
+| YES      | YES           | 2     |
+| NO       | NO            | 7     |
+| NO       | YES           | 0     |
++----------+---------------+-------+
+YES: 0.91829583405449
+NO: 0
+==> Entropy for EXERCISE,HEART DICEASE is 0.42382884648669
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++-------+--------+---------------+
+| AGE   | SMOKER | HEART DICEASE |
++-------+--------+---------------+
+| OLD   | NO     | NO            |
+| OLD   | YES    | NO            |
+| YOUNG | NO     | YES           |
+| YOUNG | NO     | NO            |
+| YOUNG | YES    | YES           |
+| OLD   | NO     | NO            |
++-------+--------+---------------+
+------------------------------------------------------
++-------+---------------+-------+
+| AGE   | HEART DICEASE | total |
++-------+---------------+-------+
+| OLD   | NO            | 3     |
+| OLD   | YES           | 0     |
+| YOUNG | NO            | 1     |
+| YOUNG | YES           | 2     |
++-------+---------------+-------+
+OLD: 0
+YOUNG: 0.91829583405449
+==> Entropy for AGE,HEART DICEASE is 0.45914791702724
++--------+---------------+-------+
+| SMOKER | HEART DICEASE | total |
++--------+---------------+-------+
+| NO     | NO            | 3     |
+| NO     | YES           | 1     |
+| YES    | NO            | 1     |
+| YES    | YES           | 1     |
++--------+---------------+-------+
+NO: 0.81127812445913
+YES: 1
+==> Entropy for SMOKER,HEART DICEASE is 0.87418541630609
+
+ !
+ ! [CAUTION] using dataset :
+ !
+
++--------+---------------+
+| SMOKER | HEART DICEASE |
++--------+---------------+
+| NO     | YES           |
+| NO     | NO            |
+| YES    | YES           |
++--------+---------------+
+------------------------------------------------------
++--------+---------------+-------+
+| SMOKER | HEART DICEASE | total |
++--------+---------------+-------+
+| NO     | NO            | 1     |
+| NO     | YES           | 1     |
+| YES    | NO            | 0     |
+| YES    | YES           | 1     |
++--------+---------------+-------+
+NO: 1
+YES: 0
+==> Entropy for SMOKER,HEART DICEASE is 0.66666666666667
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Testing
+
+JSON Tree :
+
+{"key":"GENDER","leafs":[{"value":"MALE","node":{"key":"EXERCISE","leafs":[{"value":"YES","node":{"key":"AGE","leafs":[{"value":"OLD","results":["NO"]},{"value":"YOUNG","node":{"key":"SMOKER","leafs":[{"value":"NO","results":["YES","NO"]},{"value":"YES","results":["YES"]}],"paramsEntropyScores":{"SMOKER":0.6666666666666666}}}],"paramsEntropyScores":{"AGE":0.4591479170272448,"SMOKER":0.8741854163060885}}},{"value":"NO","results":["NO"]}],"paramsEntropyScores":{"AGE":0.4647572292281859,"SMOKER":0.6186033830743398,"EXERCISE":0.4238288464866875}}},{"value":"FEMALE","results":["YES"]}],"paramsEntropyScores":{"AGE":0.7851454315650674,"GENDER":0.5367979020549286,"SMOKER":0.7851454315650674,"EXERCISE":0.825841037526968}}
+
+
+Test Result :
++-------+--------+--------+----------+---------------+---------------+
+| AGE   | GENDER | SMOKER | EXERCISE | HEART DICEASE | __test_result |
++-------+--------+--------+----------+---------------+---------------+
+| OLD   | MALE   | NO     | YES      | NO            | NO            |
+| OLD   | MALE   | YES    | YES      | NO            | NO            |
+| YOUNG | MALE   | YES    | NO       | NO            | NO            |
+| OLD   | MALE   | NO     | NO       | NO            | NO            |
+| YOUNG | FEMALE | NO     | NO       | YES           | YES           |
+| YOUNG | MALE   | NO     | YES      | YES           | YES/NO        |
+| YOUNG | MALE   | NO     | YES      | NO            | YES/NO        |
+| OLD   | FEMALE | NO     | NO       | YES           | YES           |
+| YOUNG | MALE   | YES    | NO       | NO            | NO            |
+| OLD   | MALE   | YES    | NO       | NO            | NO            |
+| YOUNG | MALE   | YES    | YES      | YES           | YES           |
+| OLD   | MALE   | YES    | NO       | NO            | NO            |
+| YOUNG | MALE   | NO     | NO       | NO            | NO            |
+| OLD   | MALE   | NO     | YES      | NO            | NO            |
+| YOUNG | MALE   | YES    | NO       | NO            | NO            |
++-------+--------+--------+----------+---------------+---------------+
+2 per 15, error rate = 13.333333333333
