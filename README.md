@@ -24,3 +24,4 @@ Result :
 ```shell
 php application demo:decision-tree data/heart_decease.csv
 ```
+![Kooha-03-17-2022-21-44-24](https://user-images.githubusercontent.com/13056772/158830692-9eb6cff9-aeb8-461b-a867-da29d7f054bd.gif)
