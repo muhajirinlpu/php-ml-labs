@@ -4,6 +4,7 @@ PHP Machine Learning Lab
 This program build using [Laravel Zero](https://laravel-zero.com/) and [Rubix ML](https://rubixml.com/).
 
 ### Naive Bayes (Rubix ML)
+Main code [here](https://github.com/muhajirinlpu/php-ml-labs/blob/main/app/Commands/NaiveBayesCommand.php)
 ```shell
 $ php application demo:naive-bayes data/dataset.csv data/test.csv --name="Possibility to buy a laptop"
 ```
@@ -13,9 +14,11 @@ https://user-images.githubusercontent.com/13056772/158528008-ea73da58-f544-42ff-
 
 
 ### Decision Tree (No Rubix ML)
+Main code [here](https://github.com/muhajirinlpu/php-ml-labs/blob/main/app/Commands/DecisionTreeCommand.php)
 ```shell
 php application demo:decision-tree data/signal.csv
 ```
+Log : 
 Result : 
 
 ![Kooha-03-17-2022-21-43-57](https://user-images.githubusercontent.com/13056772/158830083-0e6999ea-f166-4a1a-88de-325624c9561a.gif)
