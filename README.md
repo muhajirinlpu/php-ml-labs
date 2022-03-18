@@ -22,7 +22,7 @@ Main code [here](https://github.com/muhajirinlpu/php-ml-labs/blob/main/app/Comma
 ```shell
 php application demo:decision-tree data/signal.csv
 ```
-Log : 
+Log : [signal.txt](https://github.com/muhajirinlpu/php-ml-labs/blob/main/logs/signal.txt) <br>
 Result : 
 
 ![Kooha-03-17-2022-21-43-57](https://user-images.githubusercontent.com/13056772/158830083-0e6999ea-f166-4a1a-88de-325624c9561a.gif)
@@ -31,4 +31,7 @@ Result :
 ```shell
 php application demo:decision-tree data/heart_decease.csv
 ```
+Log : [heart_disease.txt](https://github.com/muhajirinlpu/php-ml-labs/blob/main/logs/heart_decease.txt) <br>
+Result :
+
 ![Kooha-03-17-2022-21-44-24](https://user-images.githubusercontent.com/13056772/158830692-9eb6cff9-aeb8-461b-a867-da29d7f054bd.gif)
